@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "33056159617",
+    "firebase_url": "https://vcallserver-a6c6d.firebaseio.com",
+    "project_id": "vcallserver-a6c6d",
+    "storage_bucket": "vcallserver-a6c6d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:33056159617:android:fc7effd48062baf7929a80",
+        "android_client_info": {
+          "package_name": "com.vignesh.vcall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "33056159617-893io76n0e92fqqeq8a36ifrdkeo9dkp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vignesh.vcall",
+            "certificate_hash": "ae887768defd04063f77dab0b3412332f2affd56"
+          }
+        },
+        {
+          "client_id": "33056159617-7comjp5fmb0a28pina94rrbucpkp8lqq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHtC2ByowFkNhAljTBji17vvHLXx4zRdg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "33056159617-7comjp5fmb0a28pina94rrbucpkp8lqq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
