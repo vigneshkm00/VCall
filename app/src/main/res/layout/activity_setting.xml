@@ -1,9 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SettingActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@color/colorPrimaryDark">
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:gravity="center"
+                android:id="@+id/avavi">
+<!--                <com.blogspot.atifsoftwares.circularimageview.CircularImageView-->
+<!--                    android:id="@+id/avatar"-->
+<!--                    android:layout_width="300dp"-->
+<!--                    android:layout_height="300dp"-->
+<!--                    android:src="@drawable/make_call"-->
+<!--                    android:background="@null"-->
+<!--                    android:padding="5dp"-->
+<!--                    />-->
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:id="@+id/avatar_setting"
+                    android:padding="6dp"
+                    android:src="@drawable/edit_profile"
+                    />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/avavi"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/name_setting"
+                    android:textSize="30sp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#000"
+                    android:hint="Name"
+                    android:drawableLeft="@drawable/edit_profile"
+                    android:drawableTint="@color/colorAccent"
+                    android:gravity="center_horizontal" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/status_setting"
+                    android:textSize="30sp"
+                    android:textColor="#000"
+                    android:hint="About you"
+                    android:drawableLeft="@drawable/edit_status"
+                    android:drawableTint="@color/colorAccent"
+                    android:gravity="center_horizontal" />
+
+                <Button
+                    android:id="@+id/save_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorAccent"
+                    android:text="Update" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

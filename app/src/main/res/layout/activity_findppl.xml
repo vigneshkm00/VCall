@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NotificationActivity">
+    tools:context=".FindpplActivity">
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,14 +15,20 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <TextView
-                    android:layout_width="wrap_content"
+                <EditText
+                    android:id="@+id/search_name"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:textStyle="bold"
-                    android:text="Notifications"
+                    android:hint="Search here.."
+                    android:textColorHint="#fff"
+                    android:textAlignment="center"
+                    android:drawableLeft="@drawable/search"
+                    android:drawableTint="@color/colorAccent"
                     android:textColor="#fff"
-                    android:layout_centerVertical="true"/>
+                    android:layout_centerVertical="true"
+                    android:gravity="center_horizontal" />
 
             </RelativeLayout>
 
@@ -31,9 +37,8 @@
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list_notification"
+        android:id="@+id/findppl_contact_list"
         android:layout_below="@+id/app_bar_contacts_findppl"
         android:layout_width="match_parent"
         android:layout_height="match_parent">

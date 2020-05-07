@@ -3,6 +3,8 @@ package com.vignesh.vcall;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -14,18 +16,34 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class DashboardActivity extends AppCompatActivity {
     BottomNavigationView navView;
+    RecyclerView contactList;
+    ImageView findPplImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
         navView = findViewById(R.id.nav_view);
+        findPplImage = findViewById(R.id.findpplbtn);
+        contactList = findViewById(R.id.contact_list);
+        contactList.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         navView.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
+
+        findPplImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(DashboardActivity.this,FindpplActivity.class);
+                startActivity(i);
+            }
+        });
+
 
     }
     private BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener =
